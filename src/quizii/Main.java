@@ -15,7 +15,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Farmer f1 = new Farmer("x", "123", 144);
+        Farmer f1 = new Farmer("GRANJA x", "123", 144);
         f1.proceso("leche", 1111, "2/01/18", "123");
         Farmer f2 = new Farmer("y", "321", 441);
         f2.proceso("harina", 4000, "04/5/11", "321");
@@ -25,9 +25,7 @@ public class Main {
         d.proceso(m, "5/12/1","744");
         Retail r1 = new Retail("z", "222", 111);
         r1.proceso(d, 2000, "744");
-        m.proceso(f1, f2, 6666, "8/9/19", "516");
-        r1.mostrarDatos(f1, f2, m, d);
-
+        System.out.println(r1.toString("744"));
         // TODO code application logic here
     }
 
