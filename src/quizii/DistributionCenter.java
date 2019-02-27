@@ -18,7 +18,7 @@ public class DistributionCenter extends Identidad {
     public void proceso(Manufacturer m, String fechaSalida,String clave) {
         producto = new Producto(m.getProducto(clave).getNombre(), m.getProducto(clave).getPrecio(), m.getProducto(clave).getFechaSalida(), fechaSalida, m.getProducto(clave).getClave());
         listaP.put(clave, producto);
-        asociado = m;
+        listaI.put(clave, m);
     }
 
 }

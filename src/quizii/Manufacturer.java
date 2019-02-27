@@ -13,6 +13,7 @@ import java.util.TreeMap;
  */
 public class Manufacturer extends Identidad {
     protected Identidad asociado2;
+    protected Identidad asociado;
     TreeMap<String, Producto> listaMf1 = new TreeMap<>();
     TreeMap<String, Producto> listaMf2 = new TreeMap<>();
 
