@@ -16,15 +16,10 @@ public class Retail extends Identidad {
     }
 
     public void proceso(DistributionCenter d, double precio, String clave) {
-
+        asociado = d;
         producto = new Producto(d.getProducto(clave).getNombre(), precio, d.getProducto(clave).getFechaEntrada(),d.getProducto(clave).getFechaSalida(), clave);
+
         listaP.put(clave, producto);
-
-    }
-
-    public void mostrarDatos(Farmer f1, Farmer f2, Manufacturer m, DistributionCenter d) {
-        //
-        System.out.println(toString() + "\n" + f1.toString() + "\n" + f2.toString() + "\n" + m.toString() + "\n" + d.toString());
-
+        
     }
 }

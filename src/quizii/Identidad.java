@@ -17,6 +17,7 @@ public abstract class Identidad {
     protected String nombre;
     protected String direccion;
     protected int telefono;
+    protected Identidad asociado;
     TreeMap<String, Producto> listaP = new TreeMap<>();
 
     public Identidad(String nombre, String direccion, int telefono) {
@@ -57,9 +58,11 @@ public abstract class Identidad {
         this.telefono = telefono;
     }
 
-    @Override
-    public String toString() {
-        return  producto + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono;
+    public String toString(String clave) {
+        return listaP.get(clave) + ", nombre identidad: " + nombre + ", Direccion: " + direccion + ", Telefono: " + telefono+ "\n " + asociado.toString(clave);
     }
 
+    
+
 }
+                                                      
