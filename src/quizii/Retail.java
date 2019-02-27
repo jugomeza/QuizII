@@ -17,9 +17,9 @@ public class Retail extends Identidad {
 
     public void proceso(DistributionCenter d, double precio, String clave) {
         listaI.put(clave, d);
-        producto = new Producto(d.getProducto(clave).getNombre(), precio, d.getProducto(clave).getFechaEntrada(),d.getProducto(clave).getFechaSalida(), clave);
+        producto = new Producto(d.getProducto(clave).getNombre(), precio, d.getProducto(clave).getFechaEntrada(), d.getProducto(clave).getFechaSalida(), clave);
 
         listaP.put(clave, producto);
-        
+
     }
 }

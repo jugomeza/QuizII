@@ -22,7 +22,7 @@ public class Main {
         Manufacturer m = new Manufacturer("w", "111", 444);
         m.proceso(f1, f2, 4444, "1/1/1", "744");
         DistributionCenter d = new DistributionCenter("d", "777", 443);
-        d.proceso(m, "5/12/1","744");
+        d.proceso(m, "5/12/1", "744");
         Retail r1 = new Retail("z", "222", 111);
         r1.proceso(d, 2000, "744");
         System.out.println(r1.toString("744"));

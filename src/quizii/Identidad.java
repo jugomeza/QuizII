@@ -59,10 +59,7 @@ public abstract class Identidad {
     }
 
     public String toString(String clave) {
-        return listaP.get(clave) + ", nombre identidad: " + nombre + ", Direccion: " + direccion + ", Telefono: " + telefono+ "\n " + listaI.get(clave).toString(clave);
+        return listaP.get(clave) + ", nombre identidad: " + nombre + ", Direccion: " + direccion + ", Telefono: " + telefono + "\n " + listaI.get(clave).toString(clave);
     }
 
-    
-
 }
-                                                      

@@ -17,7 +17,6 @@ public class Producto {
     private String fechaSalida;
     private String clave;
 
-
     public Producto(String nombre, double precio, String fechaSalida, String clave) {
         this.nombre = nombre;
         this.precio = precio;

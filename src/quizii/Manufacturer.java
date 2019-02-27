@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * @author INTEL
  */
 public class Manufacturer extends Identidad {
-   
+
     TreeMap<String, Identidad> listaf1 = new TreeMap<>();
     TreeMap<String, Identidad> listaf2 = new TreeMap<>();
     TreeMap<String, Producto> listaMf1 = new TreeMap<>();
@@ -25,20 +25,19 @@ public class Manufacturer extends Identidad {
     protected Producto productof2;
 
     public void proceso(Farmer f1, Farmer f2, double precio, String fechaSalida, String clave) {
-        productof1 = new Producto(f1.producto.getNombre(), f1.producto.getPrecio(), f1.producto.getFechaSalida(),"no aplica",clave);
-        productof2 = new Producto(f2.producto.getNombre(), f2.producto.getPrecio(), f2.producto.getFechaSalida(), "no aplica",clave);
+        productof1 = new Producto(f1.producto.getNombre(), f1.producto.getPrecio(), f1.producto.getFechaSalida(), "no aplica", clave);
+        productof2 = new Producto(f2.producto.getNombre(), f2.producto.getPrecio(), f2.producto.getFechaSalida(), "no aplica", clave);
         producto = new Producto("Pan", precio, "no aplica", fechaSalida, clave);
         listaf1.put(clave, f1);
         listaf2.put(clave, f2);
         listaP.put(clave, producto);
         listaMf1.putIfAbsent(clave, productof1);
         listaMf2.putIfAbsent(clave, productof2);
-        
+
     }
+
     @Override
     public String toString(String clave) {
-        return listaP.get(clave) + ", Nombre: " + nombre + ", Direccion: " + direccion + ", Telefono: " + telefono+ "\n " +listaMf1.get(clave)+" " +listaf1.get(clave).toString() +"\n"+listaMf2.get(clave)+" " + listaf2.get(clave).toString();
+        return listaP.get(clave) + ", Nombre: " + nombre + ", Direccion: " + direccion + ", Telefono: " + telefono + "\n " + listaMf1.get(clave) + " " + listaf1.get(clave).toString() + "\n" + listaMf2.get(clave) + " " + listaf2.get(clave).toString();
     }
 }
-    
-  
